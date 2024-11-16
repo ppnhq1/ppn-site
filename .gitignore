@@ -29,3 +29,7 @@ Desktop.ini
 
 # Dependency directories
 /bower_components/
+
+#.next/
+.next/
+
