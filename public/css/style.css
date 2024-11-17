@@ -2758,6 +2758,12 @@ footer.mil-footer-dark-2 .mil-footer-bottom {
   color: rgb(35, 206, 107);
 } /*# sourceMappingURL=style.css.map */
 
+/* -------------------------------------------
+
+misc
+
+------------------------------------------- */
+
 /* Default color and bold styling for the "More information" link */
 .mil-info-link {
   color: #ffffff; /* White */
@@ -2812,4 +2818,177 @@ footer.mil-footer-dark-2 .mil-footer-bottom {
 
 .mil-info-link {
   margin-top: auto; /* Pushes the link to the bottom of the container */
+}
+
+/* -------------------------------------------
+
+blog
+
+------------------------------------------- */
+/* General Blog Container */
+.blog-content {
+  background-color: #f6f8ff; /* Fourth color as background */
+  padding: 2rem;
+  border-radius: 8px; /* Rounded corners for a soft look */
+}
+
+/* Styling the blog title specifically */
+.blog-title {
+  color: #060a57; /* Primary color for the blog title */
+  font-weight: bold; /* Optional: Make the title bold */
+  margin-bottom: 1.5rem; /* Add spacing below the title */
+}
+
+.blog-accent {
+  color: #233dff;
+  font-weight: bold;
+}
+
+/* Headings Styles */
+.blog-content h1 {
+  font-size: 2.5rem;
+  color: #060a57; /* Primary color */
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  color: #060a57; /* Secondary color */
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #23ce6b; /* Third color as an underline */
+  padding-bottom: 0.5rem;
+}
+
+.blog-content h3 {
+  font-size: 1.75rem;
+  color: #233dff; /* Secondary color */
+  margin-bottom: 1rem;
+}
+
+.blog-content h4 {
+  font-size: 1.5rem;
+  color: #50514f; /* Fifth color for less emphasized headings */
+  margin-bottom: 0.8rem;
+}
+
+/* Paragraph Styles */
+.blog-content p {
+  font-size: 1.125rem;
+  color: #50514f; /* Fifth color for body text */
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Blockquote Styling */
+.blog-content blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #060a57; /* Primary color for emphasis */
+  border-left: 4px solid #23ce6b; /* Third color for left border */
+  padding-left: 15px;
+  margin: 1.5rem 0;
+}
+
+/* Link Styling */
+.blog-content a {
+  color: #233dff; /* Secondary color for links */
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.blog-content a:hover {
+  color: #23ce6b; /* Third color to indicate hover effect */
+  text-decoration: none;
+}
+
+/* Unordered List (ul) and List Items (li) */
+.blog-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #50514f; /* Fifth color for list items */
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Button Styling (if applicable) */
+.button-primary {
+  background-color: #23ce6b; /* Third color for primary buttons */
+  color: #f6f8ff; /* Fourth color for text */
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #233dff; /* Secondary color on hover */
+}
+
+/* Tags Styling */
+.blog-content .tags {
+  display: inline-block;
+  background-color: #060a57; /* Primary color for tag background */
+  color: #f6f8ff; /* Fourth color for tag text */
+  font-size: 0.875rem;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+}
+
+/* Author and Date Styling */
+.blog-content .author {
+  color: #23ce6b; /* Third color for author name */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.blog-content .date {
+  color: #50514f; /* Fifth color for the date */
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.mil-blog-quote {
+  color: #233dff;
+  font-style: italic;
+  font-weight: light;
+  opacity: 60%;
+}
+
+/*CTA2 Form Container*/
+/* Style for the form container */
+.mil-form-container {
+  background-color: #ffffff; /* White background */
+  max-width: 75%; /* Max width of 100px */
+  margin: 0 auto; /* Center align the container */
+  padding: 20px; /* Add some padding for better spacing */
+  border-radius: 10px; /* Optional: add rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+/* Adjust form input styles as per your style guide */
+.mil-input {
+  width: 100%; /* Make input fields take full width of container */
+  padding: 10px;
+  border: 1px solid #ccc; /* Light border for inputs */
+  border-radius: 5px; /* Rounded corners for inputs */
+}
+
+/* Header and paragraph text color inside the container */
+.mil-header-text {
+  color: #060a57; /* New color for text */
+}
+
+/* Adjust button style */
+.mil-btn {
+  padding: 10px;
+  background-color: #007bff; /* Adjust button color as needed */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

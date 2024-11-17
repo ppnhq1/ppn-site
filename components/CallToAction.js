@@ -27,7 +27,7 @@ export const CallToAction1 = () => {
             </div>
           </div>
           <div className="mil-illustration-absolute mil-type-2 mil-up">
-            <img src="img/cta/1.webp" alt="illustration" />
+            <img src="/img/cta/1.webp" alt="illustration" />
           </div>
         </div>
       </div>
@@ -39,37 +39,72 @@ export const CallToAction2 = () => {
   return (
     <div className="mil-cta mil-up">
       <div className="container">
-        <div
-          className="mil-out-frame mil-p-160-160"
-          style={{ backgroundImage: "url(img/home-3/5.png)" }}
-        >
-          <div className="row justify-content-between align-items-center">
-            <div className="col-xl-7 mil-sm-text-center">
-              <h2 className="mil-light mil-mb-30 mil-up">
-                Discover the freedom <br />
-                of Total Financial Control
-              </h2>
-              <p className="mil-text-m mil-mb-60 mil-dark-soft mil-up">
-                Join Plax and take the first step towards a more <br /> balanced
-                and hassle-free financial life.
-              </p>
-              <div className="mil-buttons-frame mil-up">
-                <a
-                  href="https://apps.apple.com/"
-                  target="_blank"
-                  className="mil-btn mil-md"
+        <div className="mil-out-frame mil-visible mil-image mil-illustration-fix mil-p-160-0">
+          <div className="row align-items-center justify-content-center">
+            <div className="mil-text-center">
+              {/* New white container for form and text */}
+              <div className="mil-form-container">
+                <h2 className="mil-mb-10 mil-light mil-up mil-header-text">
+                  Get Started Today
+                </h2>
+                <p className="mil-text-m mil-light mil-mb-30 mil-up mil-header-text">
+                  At Process Payments Now, we empower our clients with better
+                  payment solutions.
+                  <br />
+                  Learn more about the power of Process Payments Now today!
+                </p>
+                <form
+                  id="callbackForm"
+                  className="mil-subscribe-form mil-text-center"
                 >
-                  App Store
-                </a>
-                <a
-                  href="https://play.google.com/"
-                  target="_blank"
-                  className="mil-btn mil-border mil-md"
-                >
-                  Google Play
-                </a>
+                  <input
+                    className="mil-input mil-mb-15"
+                    name="NAME"
+                    type="text"
+                    placeholder="Full Name"
+                    autoComplete="off"
+                    required
+                  />
+                  <input
+                    className="mil-input mil-mb-15"
+                    name="BUSINESS_NAME"
+                    type="text"
+                    placeholder="Business Name"
+                    autoComplete="off"
+                    required
+                  />
+                  <div
+                    className="mil-input-group mil-mb-15"
+                    style={{ display: "flex", gap: "15px" }}
+                  >
+                    <input
+                      className="mil-input"
+                      name="PHONE"
+                      type="tel"
+                      placeholder="Phone Number"
+                      autoComplete="off"
+                      required
+                      style={{ flex: "1" }}
+                    />
+                    <input
+                      className="mil-input"
+                      name="EMAIL"
+                      type="email"
+                      placeholder="Email"
+                      autoComplete="off"
+                      required
+                      style={{ flex: "1" }}
+                    />
+                  </div>
+                  <button type="submit" className="mil-btn mil-sm">
+                    Learn More
+                  </button>
+                </form>
               </div>
             </div>
+          </div>
+          <div className="mil-illustration-absolute mil-type-2 mil-up">
+            <img src="/img/cta/1.webp" alt="illustration" />
           </div>
         </div>
       </div>
