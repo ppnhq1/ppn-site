@@ -13,7 +13,7 @@ const Header = ({ dark }) => {
       <div className="container">
         <Link href="/" className="mil-logo">
           <img
-            src={dark ? "img/logo-light.png" : "img/logo.png"}
+            src={dark ? "img/logo.png" : "img/logo.png"}
             alt="Process Payments Now"
             width={145}
             height={56}
@@ -36,7 +36,9 @@ const Header = ({ dark }) => {
           </ul>
         </nav>
         <div className="mil-menu-buttons">
-          <Link href="register" className="mil-btn mil-clear">Log in</Link>
+          <Link href="register" className="mil-btn mil-clear">
+            Log in
+          </Link>
           <Link href="apply-now" className="mil-btn mil-sm">
             Apply Now
           </Link>

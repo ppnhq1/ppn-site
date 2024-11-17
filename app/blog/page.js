@@ -1,34 +1,46 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import clientPromise from "@/lib/mongodb";
+import BlogList from "@/components/BlogList";
+import Head from "next/head";
 import { PageBanner } from "@/components/Banner";
 import PlaxLayout from "@/layouts/PlaxLayout";
-import BlogList from "@/components/BlogList";
 
-// Function to read all posts from the content directory
-const getPosts = () => {
-  const files = fs.readdirSync(path.join(process.cwd(), "content", "blog"));
-  return files.map((filename) => {
-    const markdownWithMeta = fs.readFileSync(
-      path.join(process.cwd(), "content", "blog", filename),
-      "utf-8"
-    );
-    const { data: frontmatter } = matter(markdownWithMeta);
-    const slug = filename.replace(".md", "");
+export default async function BlogPage() {
+  let posts = [];
+  try {
+    // Connect to MongoDB
+    const client = await clientPromise;
+    const db = client.db("ppn-site-dev");
+    const collection = db.collection("blogs");
 
-    return {
-      slug,
-      ...frontmatter,
-    };
-  });
-};
+    // Fetch all blog posts
+    posts = await collection
+      .find(
+        {},
+        { projection: { slug: 1, title: 1, coverImage: 1, date: 1, author: 1 } }
+      )
+      .toArray();
 
-// Blog page component that lists all posts
-const BlogPage = () => {
-  const posts = getPosts();
+    // Convert MongoDB documents to plain JavaScript objects
+    posts = posts.map((post) => ({
+      slug: post.slug,
+      title: post.title,
+      coverImage: post.coverImage,
+      date: post.date,
+      author: post.author,
+    }));
+  } catch (error) {
+    console.error("Error fetching blog posts:", error);
+  }
 
   return (
     <PlaxLayout>
+      <Head>
+        <title>Blog | Process Payments Now</title>
+        <meta
+          name="description"
+          content="Read the latest blogs from Process Payments Now"
+        />
+      </Head>
       <PageBanner
         pageName="Blog"
         title="Your Source of Financial Information"
@@ -36,6 +48,4 @@ const BlogPage = () => {
       <BlogList posts={posts} />
     </PlaxLayout>
   );
-};
-
-export default BlogPage;
+}

@@ -1,11 +1,14 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Head from "next/head"; // Import Head component
+import { MongoClient, ObjectId } from "mongodb";
+import Head from "next/head";
 import PlaxLayout from "@/layouts/PlaxLayout";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { CallToAction2 } from "@/components/CallToAction";
+import AuthorCard from "@/components/AuthorCard";
+
+const uri = process.env.MONGODB_URI;
+const dbName = process.env.MONGODB_DB_NAME;
+const collectionName = process.env.MONGODB_BLOG;
 
 export default async function BlogPost({ params }) {
   const { slug } = params;
@@ -15,14 +18,11 @@ export default async function BlogPost({ params }) {
     <>
       {/* Meta Tags */}
       <Head>
-        <title>{post.frontmatter.title}</title>
-        <meta name="description" content={post.frontmatter.description || ""} />
-        <meta property="og:title" content={post.frontmatter.title} />
-        <meta
-          property="og:description"
-          content={post.frontmatter.description || ""}
-        />
-        <meta property="og:image" content={post.frontmatter.coverImage} />
+        <title>{post.title}</title>
+        <meta name="description" content={post.metaDescription || ""} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.metaDescription || ""} />
+        <meta property="og:image" content={post.coverImage} />
       </Head>
 
       <PlaxLayout>
@@ -32,23 +32,21 @@ export default async function BlogPost({ params }) {
               <div className="col-xl-8">
                 <div className="mil-banner-text mil-text-center">
                   <div className="mil-text-m blog-accent mil-mb-20">Blog</div>
-                  <h1 className="mil-mb-60 blog-title">
-                    {post.frontmatter.title}
-                  </h1>
+                  <h1 className="mil-mb-60 blog-title">{post.title}</h1>
                   <ul className="mil-breadcrumbs mil-pub-info mil-center">
                     <li>
                       <Link href="/" className="blog-accent">
-                        {post.frontmatter.date}
+                        {post.date}
                       </Link>
                     </li>
                     <li>
                       <Link href="/about" className="blog-accent">
-                        {post.frontmatter.author}
+                        {post.author}
                       </Link>
                     </li>
                     <li>
                       <Link href="/about" className="blog-accent">
-                        {post.frontmatter.category}
+                        {post.category}
                       </Link>
                     </li>
                   </ul>
@@ -59,13 +57,13 @@ export default async function BlogPost({ params }) {
         </div>
         {/* banner end */}
         {/* publication */}
-        <div className="mil-blog-list mil-p-0-160">
+        <div className="mil-blog-list mil-p-0-0">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-xl-12">
                 <div className="mil-pub-cover mil-mb-60 mil-up">
                   <img
-                    src={post.frontmatter.coverImage}
+                    src={post.coverImage}
                     alt="cover"
                     className="mil-scale-img"
                     data-value-1={1}
@@ -74,15 +72,13 @@ export default async function BlogPost({ params }) {
                 </div>
                 <div className="mil-mb-15 mil-up">
                   <blockquote className="mil-text-xl mil-blog-quote mil-mb-15">
-                    {post.frontmatter.quote}
+                    {post.quote.text}
                   </blockquote>
-                  <p className="mil-text-m"> {post.frontmatter.quoteAuthor}</p>
+                  <p className="mil-text-m"> {post.quote.author}</p>
                 </div>
               </div>
               <div className="col-xl-9 mil-p-80-80">
-                <h2 className="mil-mb-60 mil-up">
-                  {post.frontmatter.subTitle}
-                </h2>
+                <h2 className="mil-mb-60 mil-up">{post.subTitle}</h2>
                 <div className="blog-content">
                   <ReactMarkdown>{post.content}</ReactMarkdown>
                 </div>
@@ -91,6 +87,9 @@ export default async function BlogPost({ params }) {
           </div>
         </div>
         {/* publication end */}
+        <div className="mil-mb-80">
+          <AuthorCard />
+        </div>
         <CallToAction2 />
       </PlaxLayout>
     </>
@@ -98,25 +97,34 @@ export default async function BlogPost({ params }) {
 }
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join(process.cwd(), "content", "blog"));
+  // Connect to MongoDB and fetch slugs for all posts
+  const client = new MongoClient(uri);
+  await client.connect();
+  const db = client.db(dbName);
+  const collection = db.collection(collectionName);
 
-  return files.map((filename) => ({
-    slug: filename.replace(".md", ""),
+  const posts = await collection
+    .find({}, { projection: { slug: 1 } })
+    .toArray();
+  await client.close();
+
+  return posts.map((post) => ({
+    slug: post.slug,
   }));
 }
 
 async function getPostBySlug(slug) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join(process.cwd(), "content", "blog", `${slug}.md`),
-    "utf-8"
-  );
+  const client = new MongoClient(uri);
+  await client.connect();
+  const db = client.db(dbName);
+  const collection = db.collection(collectionName);
 
-  // Parsing frontmatter using gray-matter
-  const { data: frontmatter, content } = matter(markdownWithMeta);
+  const post = await collection.findOne({ slug });
+  await client.close();
 
-  // Return frontmatter and content (no HTML conversion needed)
-  return {
-    frontmatter,
-    content, // Passing raw markdown content to be used with ReactMarkdown
-  };
+  if (!post) {
+    throw new Error(`Post with slug "${slug}" not found`);
+  }
+
+  return post;
 }

@@ -25,7 +25,6 @@ const BlogList = ({ posts }) => {
                     {post.date}
                   </p>
                   <h4>{post.title}</h4>
-                  {/* Add author name below the title */}
                   <p className="mil-text-xs mil-author mil-mt-15">
                     {post.author}
                   </p>

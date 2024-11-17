@@ -768,6 +768,10 @@ space
   }
 }
 
+.mil-p-0-90 {
+  padding-bottom: 90px;
+}
+
 .mil-p-0-160 {
   padding-bottom: 160px;
 }
@@ -2991,4 +2995,38 @@ blog
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* Author Card CSS */
+.mil-authcard-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 75%;
+}
+
+.mil-authcard-photoContainer {
+  margin-right: 20px;
+}
+
+.mil-authcard-photo {
+  border-radius: 50%;
+}
+
+.mil-authcard-info {
+  max-width: 500px;
+}
+
+.mil-authcard-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.mil-authcard-description {
+  font-size: 1em;
+  color: #666;
 }
