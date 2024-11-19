@@ -3121,3 +3121,247 @@ blog
   top: 60px; /* Adjust vertical position */
   left: 60px; /* Adjust horizontal position */
 }
+
+/*-----------Mega Menu-----------*/
+/* Base Styles for Header */
+
+.mil-dark-2 {
+  background-color: #333;
+}
+
+.mil-mega-menu-container {
+  width: 80%; /* Allow the container to take up the full width */
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mil-top-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.mil-top-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.mil-top-menu li {
+  position: relative;
+  margin-right: 15px; /* Reduced to align with core */
+  cursor: pointer;
+}
+
+.mil-active > a {
+  color: #233dff; /* Highlight the active menu item */
+}
+
+.mil-top-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 20px; /* Added to match core CSS */
+  height: 48px; /* Added to match core CSS */
+  padding: 0 15px; /* Added to match core CSS */
+  font-family: "Poppins";
+  letter-spacing: -2%;
+  white-space: nowrap;
+  font-size: 15px;
+  justify-content: space-between;
+}
+
+.mil-top-menu li a:hover {
+  color: #233dff;
+}
+
+/* Mega Menu Styles */
+.mil-mega-menu {
+  position: relative;
+}
+
+.mil-mega-menu .mega-menu-content {
+  position: fixed; /* Fixed relative to the screen */
+  top: 100px; /* Adjust this value if needed */
+  left: 50%;
+  transform: translate(-50%, 20px); /* Center and offset the mega menu */
+  width: 85%;
+  max-width: none;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.mil-mega-menu:hover .mega-menu-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0); /* Remove offset on hover to align correctly */
+}
+
+.mega-menu-column {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.mega-menu-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Mega Menu Link Styles */
+.mil-mega-menu .mega-menu-content a {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #333; /* Default text color */
+  text-decoration: none;
+  transition: color 0.3s;
+  justify-content: flex-start;
+  margin-left: 10px; /* Margin to separate text from the icon */
+  margin-bottom: 40px; /* Added to create 20px spacing at the bottom of each link */
+}
+
+.mil-mega-menu .mega-menu-content a:hover {
+  color: #233dff; /* Text color on hover */
+}
+
+/* Menu Icon Container Styles */
+.menu-icon-container {
+  display: inline-flex; /* Inline-flex to align multiple icons horizontally */
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
+  width: 70px; /* Width to maintain a perfect circle */
+  height: 70px; /* Height to match width */
+  background: rgba(35, 206, 107, 0.4); /* Background color with transparency */
+  border-radius: 50%; /* Creates a perfect circle */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for a subtle 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+  font-size: 36px; /* Adjusted font size to fit comfortably */
+  color: #ffffff; /* Icon color */
+}
+
+.menu-icon-container {
+  margin-right: 10px;
+}
+
+/* Add hover effect to the icon container to make it interactive */
+.menu-icon-container:hover {
+  transform: scale(1.1); /* Increase the size slightly on hover */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Emphasize the shadow on hover */
+  background: rgba(35, 206, 107, 0.6); /* Darken the background on hover */
+}
+
+/* Optional active state for better feedback */
+.menu-icon-container:active {
+  transform: scale(0.95); /* Shrink slightly on click for feedback */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Reduce shadow for a pressed effect */
+}
+
+/* Change icon color on link hover */
+.mil-mega-menu .mega-menu-content a:hover .menu-icon {
+  color: #233dff;
+}
+
+/* General Button Styles */
+.mil-btn.mil-sm {
+  padding: 10px 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-shadow {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Button Toggle (Hamburger Button) */
+.mil-menu-btn {
+  display: none; /* Adjust this for responsiveness */
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.mil-menu-btn span {
+  background-color: #333;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+  .mil-top-menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .mil-top-menu.mil-active {
+    display: block;
+  }
+
+  .mil-menu-btn {
+    display: block;
+  }
+
+  .mil-mega-menu .mega-menu-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .mil-top-menu ul {
+    flex-direction: column;
+    padding: 5px; /* Added for better spacing on mobile */
+  }
+
+  .mil-top-menu ul li {
+    width: 100%;
+    margin-right: 0; /* No right margin on mobile */
+  }
+
+  .mil-top-menu ul li ul {
+    border-radius: 10px;
+    transform: none;
+    box-shadow: none;
+    position: static;
+    opacity: 1;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .mil-top-menu ul li:hover ul {
+    max-height: 400px;
+    padding: 5px 0;
+  }
+
+  .mil-top-menu ul li:hover ul li {
+    opacity: 1;
+  }
+}

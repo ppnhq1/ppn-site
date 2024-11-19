@@ -17,7 +17,10 @@ const Banner = ({
                 {title}
               </h1>
               <div className="mil-buttons-frame">
-                <Link href="register" className="mil-btn mil-md mil-add-arrow">
+                <Link
+                  href="register"
+                  className="mil-btn btn-shadow mil-md mil-add-arrow"
+                >
                   Start An Application
                 </Link>
                 <a

@@ -21,7 +21,12 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
         <div className="row">
           <div className="col-xl-3">
             <a href="#." className="mil-footer-logo mil-mb-60">
-              <img src="img/logo.png" alt="Process Payments Now" width={174} height={68} />
+              <img
+                src="img/logo.png"
+                alt="Process Payments Now"
+                width={174}
+                height={68}
+              />
             </a>
           </div>
           <div className="col-xl-3 mil-mb-60">
@@ -54,18 +59,10 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
               <li className="mil-text-m mil-soft mil-mb-15">
                 support@ppnhq.com
               </li>
-              <li className="mil-text-m mil-soft mil-mb-10">
-                (540) 386-0004
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-10">
-                (844) 327-6247
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-5">
-                Partner Support
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-5">
-                (866) 821-0452
-              </li>
+              <li className="mil-text-m mil-soft mil-mb-10">(540) 386-0004</li>
+              <li className="mil-text-m mil-soft mil-mb-10">(844) 327-6247</li>
+              <li className="mil-text-m mil-soft mil-mb-5">Partner Support</li>
+              <li className="mil-text-m mil-soft mil-mb-5">(866) 821-0452</li>
             </ul>
           </div>
           <div className="col-xl-3 mil-mb-80">
@@ -74,7 +71,13 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
               Subscribe to get the latest news form us
             </p>
             <form id="subscribeForm" className="mil-subscripe-form-footer">
-              <input className="mil-input" name="EMAIL" type="email" placeholder="Email" autocomplete="off" />
+              <input
+                className="mil-input"
+                name="EMAIL"
+                type="email"
+                placeholder="Email"
+                autocomplete="off"
+              />
               <button type="submit">
                 <i className="far fa-envelope-open mil-dark" />
               </button>
@@ -94,12 +97,19 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
           <div className="row">
             <div className="col-xl-6">
               <p className="mil-text-s mil-soft">
-              Process Payments Now is a registered ISO/MSP of Commercial Bank of California (Irvine, CA), Synovus Bank (Columbus, GA), PNC Bank (Pittsburgh, PA), FFB Bank (Fresno, CA), Westamerica Bank (San Rafael, CA), BMO Bank (Chicago, IL), and Citizens Bank (Providence, RI).
+                Process Payments Now is a registered ISO/MSP of Commercial Bank
+                of California (Irvine, CA), Synovus Bank (Columbus, GA), PNC
+                Bank (Pittsburgh, PA), FFB Bank (Fresno, CA), Westamerica Bank
+                (San Rafael, CA), BMO Bank (Chicago, IL), and Citizens Bank
+                (Providence, RI).
+                <br />
+                Process Payments Now is not a bank. Banking services are
+                provided by Sutton Bank, Member FDIC.
               </p>
             </div>
             <div className="col-xl-6">
               <p className="mil-text-s mil-text-right mil-sm-text-left mil-soft">
-              © 2024 Process Payments Now
+                © 2024 Process Payments Now
               </p>
             </div>
           </div>
@@ -115,7 +125,12 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
         <div className="row">
           <div className="col-xl-3">
             <a href="#." className="mil-footer-logo mil-mb-60">
-              <img src="img/logo.png" alt="Process Payments Now" width={174} height={68} />
+              <img
+                src="img/logo.png"
+                alt="Process Payments Now"
+                width={174}
+                height={68}
+              />
             </a>
           </div>
           <div className="col-xl-3 mil-mb-60">
@@ -148,18 +163,10 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
               <li className="mil-text-m mil-soft mil-mb-15">
                 support@ppnhq.com
               </li>
-              <li className="mil-text-m mil-soft mil-mb-10">
-                (540) 386-0004
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-10">
-                (844) 327-6247
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-5">
-                Partner Support
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-5">
-                (866) 821-0452
-              </li>
+              <li className="mil-text-m mil-soft mil-mb-10">(540) 386-0004</li>
+              <li className="mil-text-m mil-soft mil-mb-10">(844) 327-6247</li>
+              <li className="mil-text-m mil-soft mil-mb-5">Partner Support</li>
+              <li className="mil-text-m mil-soft mil-mb-5">(866) 821-0452</li>
             </ul>
           </div>
           <div className="col-xl-3 mil-mb-80">
@@ -168,7 +175,13 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
               Subscribe to get the latest news form us
             </p>
             <form id="subscribeForm" className="mil-subscripe-form-footer">
-              <input className="mil-input" name="EMAIL" type="email" placeholder="Email" autocomplete="off" />
+              <input
+                className="mil-input"
+                name="EMAIL"
+                type="email"
+                placeholder="Email"
+                autocomplete="off"
+              />
               <button type="submit">
                 <i className="far fa-envelope-open mil-dark" />
               </button>
@@ -188,12 +201,19 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
           <div className="row">
             <div className="col-xl-6">
               <p className="mil-text-s mil-soft">
-              Process Payments Now is a registered ISO/MSP of Commercial Bank of California (Irvine, CA), Synovus Bank (Columbus, GA), PNC Bank (Pittsburgh, PA), FFB Bank (Fresno, CA), Westamerica Bank (San Rafael, CA), BMO Bank (Chicago, IL), and Citizens Bank (Providence, RI).
+                Process Payments Now is a registered ISO/MSP of Commercial Bank
+                of California (Irvine, CA), Synovus Bank (Columbus, GA), PNC
+                Bank (Pittsburgh, PA), FFB Bank (Fresno, CA), Westamerica Bank
+                (San Rafael, CA), BMO Bank (Chicago, IL), and Citizens Bank
+                (Providence, RI).
+                <br />
+                Process Payments Now is not a bank. Banking services are
+                provided by Sutton Bank, Member FDIC.
               </p>
             </div>
             <div className="col-xl-6">
               <p className="mil-text-s mil-text-right mil-sm-text-left mil-soft">
-              © 2024 Process Payments Now
+                © 2024 Process Payments Now
               </p>
             </div>
           </div>
@@ -210,7 +230,12 @@ const Footer2 = () => {
         <div className="row">
           <div className="col-xl-3">
             <a href="#." className="mil-footer-logo mil-mb-60">
-              <img src="img/logo.png" alt="Process Payments Now" width={174} height={68} />
+              <img
+                src="img/logo.png"
+                alt="Process Payments Now"
+                width={174}
+                height={68}
+              />
             </a>
           </div>
           <div className="col-xl-3 mil-mb-60">
@@ -243,18 +268,10 @@ const Footer2 = () => {
               <li className="mil-text-m mil-soft mil-mb-15">
                 support@ppnhq.com
               </li>
-              <li className="mil-text-m mil-soft mil-mb-10">
-                (540) 386-0004
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-10">
-                (844) 327-6247
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-5">
-                Partner Support
-              </li>
-              <li className="mil-text-m mil-soft mil-mb-5">
-                (866) 821-0452
-              </li>
+              <li className="mil-text-m mil-soft mil-mb-10">(540) 386-0004</li>
+              <li className="mil-text-m mil-soft mil-mb-10">(844) 327-6247</li>
+              <li className="mil-text-m mil-soft mil-mb-5">Partner Support</li>
+              <li className="mil-text-m mil-soft mil-mb-5">(866) 821-0452</li>
             </ul>
           </div>
           <div className="col-xl-3 mil-mb-80">
@@ -263,7 +280,13 @@ const Footer2 = () => {
               Subscribe to get the latest news form us
             </p>
             <form id="subscribeForm" className="mil-subscripe-form-footer">
-              <input className="mil-input" name="EMAIL" type="email" placeholder="Email" autocomplete="off" />
+              <input
+                className="mil-input"
+                name="EMAIL"
+                type="email"
+                placeholder="Email"
+                autocomplete="off"
+              />
               <button type="submit">
                 <i className="far fa-envelope-open mil-dark" />
               </button>
@@ -283,12 +306,19 @@ const Footer2 = () => {
           <div className="row">
             <div className="col-xl-6">
               <p className="mil-text-s mil-soft">
-              Process Payments Now is a registered ISO/MSP of Commercial Bank of California (Irvine, CA), Synovus Bank (Columbus, GA), PNC Bank (Pittsburgh, PA), FFB Bank (Fresno, CA), Westamerica Bank (San Rafael, CA), BMO Bank (Chicago, IL), and Citizens Bank (Providence, RI).
+                Process Payments Now is a registered ISO/MSP of Commercial Bank
+                of California (Irvine, CA), Synovus Bank (Columbus, GA), PNC
+                Bank (Pittsburgh, PA), FFB Bank (Fresno, CA), Westamerica Bank
+                (San Rafael, CA), BMO Bank (Chicago, IL), and Citizens Bank
+                (Providence, RI).
+                <br />
+                Process Payments Now is not a bank. Banking services are
+                provided by Sutton Bank, Member FDIC.
               </p>
             </div>
             <div className="col-xl-6">
               <p className="mil-text-s mil-text-right mil-sm-text-left mil-soft">
-              © 2024 Process Payments Now
+                © 2024 Process Payments Now
               </p>
             </div>
           </div>
