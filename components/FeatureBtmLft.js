@@ -43,12 +43,14 @@ const FeatureBtmLft = () => {
             </ul>
           </div>
           <div className="col-xl-5 mil-mb-80">
-            <div className="mil-image-frame mil-visible-overflow">
-              <img
-                src="img/featuresbtmlft/1.webp"
-                alt="image"
-                className="mil-up"
-              />
+            <div className="mil-image-wrapper mil-up">
+              <div className="mil-image-frame mil-visible-overflow">
+                <img
+                  src="img/featuresbtmlft/1.webp"
+                  alt="image"
+                  className="mil-up"
+                />
+              </div>
             </div>
           </div>
         </div>

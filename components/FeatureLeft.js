@@ -52,6 +52,7 @@ const FeaturesLeft = () => {
           </div>
           <div className="col-xl-5 mil-mb-80">
             <div className="mil-image-frame mil-visible-overflow">
+              <div className="mil-circle-background mil-up"></div>
               <img
                 src="img/featuresleft/1.webp"
                 alt="image"

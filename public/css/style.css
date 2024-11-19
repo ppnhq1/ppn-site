@@ -53,7 +53,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
@@ -102,7 +102,7 @@ h6,
 .h5,
 .h6 {
   font-weight: 600;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   line-height: 1.3;
   letter-spacing: -0.04em;
 }
@@ -119,18 +119,18 @@ h6 span,
 .h5 span,
 .h6 span {
   font-weight: 600;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   line-height: 1.3;
   letter-spacing: -0.04em;
 }
 
 h1,
 .h1 {
-  font-size: 77px;
+  font-size: 67px;
 }
 h1.mil-display,
 .h1.mil-display {
-  font-size: 100px;
+  font-size: 70px;
   line-height: 1.15;
 }
 @media screen and (max-width: 992px) {
@@ -409,7 +409,7 @@ breadcrumbs
   color: rgb(35, 206, 107);
 }
 .mil-breadcrumbs li a {
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   font-size: 14px;
   font-weight: 500;
 }
@@ -445,7 +445,7 @@ buttons
   white-space: nowrap;
   background-color: rgb(34, 61, 255);
   border-radius: 10px;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   font-weight: 600;
   color: rgb(246, 248, 255);
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
@@ -469,7 +469,9 @@ buttons
   padding: 0 20px;
   height: 48px;
   font-size: 16px;
+  background: #23ce6b;
 }
+
 .mil-btn.mil-m {
   padding: 0 30px;
   height: 56px;
@@ -568,7 +570,7 @@ buttons
 }
 
 .mil-link {
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -2%;
@@ -996,7 +998,7 @@ top menu
   height: 48px;
   padding: 0 15px;
   color: rgb(80, 81, 79);
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   font-weight: 600;
   letter-spacing: -2%;
   z-index: 1;
@@ -2429,7 +2431,7 @@ comments
   right: 0;
   font-weight: 600;
   font-size: 14px;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   color: rgb(34, 61, 255);
 }
 .mil-comments li ul {
@@ -2460,14 +2462,14 @@ form
   border: solid 1px rgba(137, 141, 150, 0.2);
   font-weight: 600;
   font-size: 14px;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   border-radius: 20px;
   padding: 0 30px;
 }
 .mil-input::placeholder {
   font-weight: 600;
   font-size: 14px;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
 }
 
 textarea {
@@ -2479,7 +2481,7 @@ textarea {
 textarea::placeholder {
   font-weight: 600;
   font-size: 14px;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
 }
 
 .mil-checkbox-frame {
@@ -2618,7 +2620,7 @@ price
   position: absolute;
   top: -20px;
   right: -20px;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   font-size: 12px;
   font-weight: 600;
   color: rgb(246, 248, 255);
@@ -2635,7 +2637,7 @@ price
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Switzer-Variable";
+  font-family: "Poppins";
   margin-right: 5px;
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
 }
@@ -3029,4 +3031,93 @@ blog
 .mil-authcard-description {
   font-size: 1em;
   color: #666;
+}
+
+/* Featured Posts */
+.featured-posts {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.posts-container {
+  display: flex;
+  gap: 20px;
+}
+.post {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/*-----------Gradient Animation-----------*/
+#gradient-canvas {
+  width: 100%;
+  height: 100%;
+  --gradient-color-1: #b4c8ff; /* Pastel vibrant version of #233dff */
+  --gradient-color-2: #f5b4d6; /* Pastel vibrant pink replacing #060a57 */
+  --gradient-color-3: #d6bff0; /* Pastel vibrant version of #a177d6 */
+  --gradient-color-4: #b0f4bb; /* Pastel vibrant version of #23CE6B */
+}
+
+/*-----------Features Right-----------*/
+.mil-card {
+  background: #ffffff; /* White background */
+  width: 600px;
+  border-radius: 12px; /* Rounded corners */
+  padding: 30px; /* Padding inside the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for card effect */
+  margin-bottom: 30px; /* Spacing below the card */
+}
+
+/* Image container for FeaturesRight */
+.mil-image-container {
+  position: relative;
+}
+
+/* Circle background behind the image */
+.mil-circle-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 550px; /* Adjust size as needed */
+  height: 550px; /* Adjust size as needed */
+  background: linear-gradient(45deg, #233dff, #060a57);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Image styling to bring it in front of the circle */
+.mil-image-container img.mil-up {
+  position: flex;
+  z-index: 1;
+}
+
+/*-----------Features Bottom Left-----------*/
+.mil-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mil-image-wrapper::before,
+.mil-image-wrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.mil-image-wrapper::before {
+  width: 450px; /* Adjust size */
+  height: 450px; /* Adjust size */
+  background: linear-gradient(45deg, #23ce6b, #1ea957);
+  top: -40px; /* Adjust vertical position */
+  left: -40px; /* Adjust horizontal position */
+}
+
+.mil-image-wrapper::after {
+  width: 450px; /* Adjust size */
+  height: 450px; /* Adjust size */
+  background: linear-gradient(180deg, #223dff, #060a57);
+  top: 60px; /* Adjust vertical position */
+  left: 60px; /* Adjust horizontal position */
 }

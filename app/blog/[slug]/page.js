@@ -5,6 +5,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { CallToAction2 } from "@/components/CallToAction";
 import AuthorCard from "@/components/AuthorCard";
+import FeaturedPosts from "@/components/FeaturedPosts";
 
 const uri = process.env.MONGODB_URI;
 const dbName = process.env.MONGODB_DB_NAME;
@@ -90,6 +91,7 @@ export default async function BlogPost({ params }) {
         <div className="mil-mb-80">
           <AuthorCard />
         </div>
+        <FeaturedPosts />
         <CallToAction2 />
       </PlaxLayout>
     </>

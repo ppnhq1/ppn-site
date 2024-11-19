@@ -2,6 +2,7 @@
 import { sliderProps } from "@/utility/sliderProps";
 import { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 const Testimonials1 = () => {
   return (
     <Fragment>
@@ -34,7 +35,10 @@ const Testimonials1 = () => {
               />
             </svg>
             <p className="mil-mb-60 mil-light mil-up">
-                Scott and his team are excellent! They truly get to the bottom of how your processing side works to come up with the most efficient and cost effective approach that meets your businesses needs. Thank you!
+              Scott and his team are excellent! They truly get to the bottom of
+              how your processing side works to come up with the most efficient
+              and cost effective approach that meets your businesses needs.
+              Thank you!
             </p>
             <h4 className="mil-up mil-light">Andrew G.</h4>
             <h6 className="mil-up">Grapevine Home Renovations</h6>
@@ -65,7 +69,10 @@ const Testimonials1 = () => {
               />
             </svg>
             <p className="mil-mb-60 mil-light mil-up">
-               Scott and his team are well versed when it comes to payments. From analyzing a merchant statement to developing a custom tailored payment acceptance solution, Scott is your go to guy. Keep it up Scott
+              Scott and his team are well versed when it comes to payments. From
+              analyzing a merchant statement to developing a custom tailored
+              payment acceptance solution, Scott is your go to guy. Keep it up
+              Scott
             </p>
             <h4 className="mil-up mil-light">Riley W.</h4>
             <h6 className="mil-up">Secured Payments</h6>
@@ -96,7 +103,10 @@ const Testimonials1 = () => {
               />
             </svg>
             <p className="mil-mb-60 mil-light mil-up">
-               Process Payments Now made my foundations ability to collect fundraising donations so easy. Scott went ABOVE and beyond to help. I mean WAY above and beyond to help me. I love the cost free platform to grow my non-profit!
+              Process Payments Now made my foundations ability to collect
+              fundraising donations so easy. Scott went ABOVE and beyond to
+              help. I mean WAY above and beyond to help me. I love the cost free
+              platform to grow my non-profit!
             </p>
             <h4 className="mil-up mil-light">Sherry C.</h4>
             <h6 className="mil-up">Kids On First Foundation</h6>
@@ -127,7 +137,8 @@ const Testimonials1 = () => {
               />
             </svg>
             <p className="mil-mb-60 mil-light mil-up">
-               Scott and his team make it really easy for sales partners to grow our books of business! Best team around!
+              Scott and his team make it really easy for sales partners to grow
+              our books of business! Best team around!
             </p>
             <h4 className="mil-up mil-light">Camden G.</h4>
             <h6 className="mil-up">Payments Agent</h6>

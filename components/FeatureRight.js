@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
 
 const FeaturesRight = () => {
   const features = [
@@ -25,36 +26,48 @@ const FeaturesRight = () => {
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col-xl-6 mil-mb-80">
-            <h2 className="mil-mb-30 mil-up">
-              Take Full Control of Your Payments
-            </h2>
-            <p className="mil-text-m mil-soft mil-mb-60 mil-up">
-              Gain complete control over your payment processes with solutions
-              designed to streamline transactions, improve cash flow, and
-              enhance customer satisfaction. With Process Payments Now, you
-              manage your payments your way—efficiently and effortlessly.
-            </p>
-            <ul className="mil-list-2 mil-mb-60">
-              {features.map((feature, index) => (
-                <li key={index}>
-                  <div className="mil-up">
-                    <h5 className="mil-mb-15">{feature.title}</h5>
-                    <p className="mil-text-m mil-soft">{feature.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <div className="mil-up mil-mb-60">
-              <Link
-                href="/about"
-                className="mil-btn mil-button-transform mil-m mil-add-arrow"
-              >
-                Learn More
-              </Link>
+            <div className="mil-card mil-up mil-mb-30">
+              {" "}
+              {/* Added card wrapper */}
+              <h2 className="mil-mb-30 mil-up">
+                Payments For Your
+                <br />
+                <TypeAnimation
+                  preRenderFirstString={true}
+                  sequence={[
+                    "Smoke Shop",
+                    2000,
+                    "Online Store",
+                    2000,
+                    "Collection Agency",
+                    2000,
+                    "Restaurants",
+                    2000,
+                    "Landscaping Firm",
+                    2000,
+                  ]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                  style={{ color: "#060a57" }}
+                />
+              </h2>
+              <ul className="mil-list-2 mil-mb-30">
+                {features.map((feature, index) => (
+                  <li key={index}>
+                    <div className="mil-up">
+                      <h5 className="mil-mb-15">{feature.title}</h5>
+                      <p className="mil-text-m mil-soft">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           <div className="col-xl-4 mil-mb-80">
-            <div className="mil-image-frame mil-image-frame-2 mil-visible-overflow">
+            <div className="mil-image-container mil-image-frame mil-image-frame-2 mil-visible-overflow">
               <img
                 src="img/featuresright/1.webp"
                 alt="image"

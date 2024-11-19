@@ -1,6 +1,6 @@
 "use client";
 import { CallToAction2 } from "@/components/CallToAction";
-import Pricing from "@/components/Pricing";
+import Pricing2 from "@/components/Pricing";
 import PlaxLayout from "@/layouts/PlaxLayout";
 import Link from "next/link";
 const page = () => {
@@ -33,7 +33,7 @@ const page = () => {
       {/* prices*/}
       <div className="mil-blog-list mil-p-0-130">
         <div className="container">
-          <Pricing />
+          <Pricing2 />
         </div>
       </div>
       {/* prices end */}
