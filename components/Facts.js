@@ -13,7 +13,7 @@ const Facts = () => {
   ];
 
   return (
-    <div className="mil-facts mil-p-160-80">
+    <div className="mil-facts mil-p-90-90">
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col-xl-6">
@@ -23,8 +23,8 @@ const Facts = () => {
                   key={index}
                   className={`col-xl-6 ${
                     index === 1
-                      ? "mil-sm-text-center mil-mb-80"
-                      : "mil-sm-text-center mil-mb-30"
+                      ? "mil-sm-text-center"
+                      : "mil-sm-text-center "
                   } mil-up`}
                 >
                   <p className="h1 mil-display mil-mb-15">
@@ -41,7 +41,7 @@ const Facts = () => {
               ))}
             </div>
           </div>
-          <div className="col-xl-5 mil-mb-80">
+          <div className="col-xl-5">
             <p className="mil-text-m mil-soft mil-up">
               Process Payments Now powers businesses from all industries with
               the tools and resources they need to efficiently run their

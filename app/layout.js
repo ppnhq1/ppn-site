@@ -1,13 +1,13 @@
 import { Questrial } from 'next/font/google'
 
-import "@fonts/css/switzer.css";
+import "@fonts/css/switzer.css"; 
 import "./globals.css";
 
 import "@fonts/font-awesome.min.css";
 
 import "@css/plugins/bootstrap-grid.css";
 
-import "@css/plugins/swiper.min.css";
+import "@css/plugins/swiper.min.css"
 
 import "@css/plugins/magnific-popup.css";
 

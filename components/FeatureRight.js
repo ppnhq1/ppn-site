@@ -25,8 +25,8 @@ const FeaturesRight = () => {
     <div className="mil-features mil-p-0-80">
       <div className="container">
         <div className="row justify-content-between align-items-center">
-          <div className="col-xl-6 mil-mb-80">
-            <div className="mil-card mil-up mil-mb-30">
+          <div className="col-xl-6" >
+            <div className="mil-card mil-up">
               {" "}
               {/* Added card wrapper */}
               <h2 className="mil-mb-30 mil-up">
@@ -112,12 +112,12 @@ const FeaturesRight = () => {
               </ul>
             </div>
           </div>
-          <div className="col-xl-4 mil-mb-80">
-            <div className="mil-image-container mil-image-frame mil-image-frame-2 mil-visible-overflow">
+          <div className="col-xl-4">
+            <div className="mil-image-container mil-image-frame mil-visible-overflow">
               <img
                 src="img/featuresright/1.webp"
                 alt="image"
-                className="mil-up"
+                className="mil-up img-position"
               />
             </div>
           </div>

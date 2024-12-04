@@ -18,8 +18,8 @@ export const plaxUtility = {
         section,
         {
           opacity: 0,
-          y: 50,
-          scale: 0.98,
+          y: 70,
+          scale: 1.05,
           ease: "sine",
         },
         {
@@ -30,7 +30,7 @@ export const plaxUtility = {
             trigger: section,
             toggleActions: "play none none reverse",
           },
-        }
+        } 
       );
     });
 

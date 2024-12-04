@@ -2,7 +2,7 @@ import React from "react";
 
 const Brands = () => {
   return (
-    <div className="mil-brands mil-p-160-160">
+    <div className="mil-brands mil-p-90-90">
       <div className="container">
         <h5 className="mil-text-center mil-soft mil-mb-60 mil-up">
           Powered by industry leading partners and technology!

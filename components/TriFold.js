@@ -5,7 +5,7 @@ const TriFold = () => {
   return (
     <div className="mil-cta mil-up">
       <div className="container">
-        <div className="mil-out-frame mil-visible mil-image mil-p-160-130">
+        <div className="mil-out-frame mil-out-frames mil-visible mil-image mil-p-90">
           <div className="row align-items-end">
             <div className="col-xl-8 mil-mb-80-adaptive-30">
               <h2 className="mil-up mil-light">
@@ -21,7 +21,7 @@ const TriFold = () => {
               </Link>
             </div>
           </div>
-          <div className="row">
+          <div className="row card-gap">
             {[
               {
                 href: "/about",
@@ -45,7 +45,7 @@ const TriFold = () => {
                   "We are a catalyst for community transformation. Beyond facilitating seamless financial transactions, we are passionately committed to revitalizing America by forging partnerships with local community organizations and initiatives.",
               },
             ].map((item, index) => (
-              <div key={index} className="col-xl-4 mil-mb-30">
+              <div key={index} className="col-xl-4">
                 <Link
                   href={item.href}
                   className="mil-icon-box mil-center mil-hover"
