@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const CallToAction1 = () => {
   return (
@@ -7,21 +8,29 @@ export const CallToAction1 = () => {
         <div className="mil-out-frame mil-visible mil-image mil-illustration-fix mil-p-160-0">
           <div className="row align-items-end">
             <div className="mil-text-center">
-              <h2 className="mil-mb-30 mil-light mil-up">
+              <h2 className="mil-mb-20 mil-light mil-up">
                 Discover the Difference When You Switch <br></br>
                 To Process Payments Now
               </h2>
-              <p className="mil-text-m mil-light mil-mb-60 mil-up">
+              <p className="mil-text-m mil-light mil-mb-80 mil-up">
                 At Process Payments Now, we empower our clients with better
                 payment solutions.<br></br>
                 Learn more about the power of Procss Payments Now today!
               </p>
-              <div className="mil-up mil-mb-60">
+              <div className="mil-up mil-mb-20">
                 <Link
                   href="/register"
                   className="mil-btn mil-button-transform mil-md mil-add-arrow"
                 >
-                  Schedule A Demo
+                  <motion.span
+                    style={{
+                      color: "white",
+                      display: "inline-block",
+                    }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    Schedule A Demo
+                  </motion.span>
                 </Link>
               </div>
             </div>

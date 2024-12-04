@@ -23,11 +23,11 @@ const FeaturesLeft = () => {
     <div className="mil-features mil-p-0-80">
       <div className="container">
         <div className="row flex-sm-row-reverse justify-content-between align-items-center">
-          <div className="col-xl-6 mil-mb-80">
-            <h2 className="mil-mb-30 mil-up">
+          <div className="col-xl-6 mil-mb-50">
+            <h2 className="mil-mb-20 mil-up">
               Your Partner For Credit Card and ACH Processing
             </h2>
-            <p className="mil-text-m mil-soft mil-mb-60 mil-up">
+            <p className="mil-text-m mil-soft mil-mb-20 mil-up">
               The Process Payments Now ecosystem of payment solutions is
               designed to empower your business by streamlining transactions and
               enhancing cash flow. From flexible pricing and ACH origination to
@@ -41,7 +41,7 @@ const FeaturesLeft = () => {
               {features.map((feature, index) => (
                 <li key={index}>
                   <div className="mil-up">
-                    <h5 className="mil-mb-15 mil-up">{feature.title}</h5>
+                    <h5 className="mil-mb-10 mil-up">{feature.title}</h5>
                     <p className="mil-text-m mil-soft mil-up">
                       {feature.description}
                     </p>
@@ -50,7 +50,7 @@ const FeaturesLeft = () => {
               ))}
             </ul>
           </div>
-          <div className="col-xl-5 mil-mb-80">
+          <div className="col-xl-5 mil-mb-40">
             <div className="mil-image-frame mil-visible-overflow">
               <div className="mil-circle-background mil-up"></div>
               <img

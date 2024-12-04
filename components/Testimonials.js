@@ -34,7 +34,7 @@ const Testimonials1 = () => {
                 fill="#F6F8FF"
               />
             </svg>
-            <p className="mil-mb-60 mil-light mil-up">
+            <p className="mil-mb-40 mil-light mil-up">
               Scott and his team are excellent! They truly get to the bottom of
               how your processing side works to come up with the most efficient
               and cost effective approach that meets your businesses needs.
@@ -68,7 +68,7 @@ const Testimonials1 = () => {
                 fill="#F6F8FF"
               />
             </svg>
-            <p className="mil-mb-60 mil-light mil-up">
+            <p className="mil-mb-40 mil-light mil-up">
               Scott and his team are well versed when it comes to payments. From
               analyzing a merchant statement to developing a custom tailored
               payment acceptance solution, Scott is your go to guy. Keep it up
@@ -102,7 +102,7 @@ const Testimonials1 = () => {
                 fill="#F6F8FF"
               />
             </svg>
-            <p className="mil-mb-60 mil-light mil-up">
+            <p className="mil-mb-40 mil-light mil-up">
               Process Payments Now made my foundations ability to collect
               fundraising donations so easy. Scott went ABOVE and beyond to
               help. I mean WAY above and beyond to help me. I love the cost free
