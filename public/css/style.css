@@ -1317,7 +1317,7 @@ banner
   overflow: hidden;
   background-color: rgb(246, 248, 255);
   height: 100vh;
-  min-height: 900px;
+  min-height: 750px; /*min height adjusted to reduce whitespace*/
   display: flex;
   align-items: center;
   padding-top: 40px;
