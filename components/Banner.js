@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {motion} from 'framer-motion'
 const Banner = ({
   title = "Process Payments Now",
   subTitle = "Trusted by Small Businesses Nationwide",
@@ -7,10 +8,19 @@ const Banner = ({
   dark = false,
 }) => {
   return (
-    <div className={`mil-banner mil-dissolve ${dark ? "mil-dark-2" : ""}`}>
+    <motion.div 
+      className={`mil-banner mil-dissolve ${dark ? "mil-dark-2" : ""}`} 
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-xl-6">
+          <motion.div className="col-xl-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
             <div className="mil-banner-text">
               <h6 className="mil-text-gradient-2 mil-mb-20">{subTitle}</h6>
               <h1 className="mil-display mil-text-gradient-3 mil-mb-60">
@@ -31,15 +41,19 @@ const Banner = ({
                 </a>
               </div>
             </div>
-          </div>
-          <div className="col-xl-6">
+          </motion.div>
+          <motion.div className="col-xl-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
             <div className="mil-banner-img">
               <img src={img} alt="banner" style={style} />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Banner;
