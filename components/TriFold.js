@@ -1,23 +1,36 @@
 import Link from "next/link";
 import { FaPiggyBank, FaHandshake, FaRocketchat } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 const TriFold = () => {
   return (
     <div className="mil-cta mil-up">
       <div className="container">
         <div className="mil-out-frame mil-visible mil-image mil-p-160-130">
-          <div className="row align-items-end">
-            <div className="col-xl-8 mil-mb-80-adaptive-30">
+          <div
+            className="row align-items-end"
+            style={{
+              marginBottom: "60px",
+            }}
+          >
+            <div className="col-xl-8 mil-mb-40-adaptive-30">
               <h2 className="mil-up mil-light">
                 We empower businesses with payment technology
               </h2>
             </div>
-            <div className="col-xl-4 mil-mb-80 mil-up">
+            <div className="col-xl-4 mil-mb-40 mil-up">
               <Link
                 href="/services"
                 className="mil-btn mil-m mil-add-arrow mil-adaptive-right"
               >
-                Learn More
+                <motion.span
+                  style={{
+                    color: "white",
+                    display: "inline-block",
+                  }}
+                  whileHover={{ scale: 1.15 }}
+                >
+                  Learn More
+                </motion.span>
               </Link>
             </div>
           </div>
@@ -50,14 +63,18 @@ const TriFold = () => {
                   href={item.href}
                   className="mil-icon-box mil-center mil-hover"
                 >
-                  <div className="mil-content-container">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="mil-content-container"
+                  >
                     <div className="mil-icon">{item.icon}</div>
-                    <h5 className="mil-mb-20 mil-light mil-up">{item.title}</h5>
-                    <p className="mil-text-m mil-light mil-mb-30 mil-up">
+                    <h5 className="mil-mb-10 mil-light mil-up">{item.title}</h5>
+                    <p className="mil-text-m mil-light mil-mb-10 mil-up">
                       {item.description}
                     </p>
                     <div className="mil-info-link mil-up">More Information</div>
-                  </div>
+                  </motion.div>
                 </Link>
               </div>
             ))}

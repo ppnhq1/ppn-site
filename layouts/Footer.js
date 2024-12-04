@@ -76,7 +76,7 @@ const Footer1 = ({ bg = true, margin = 160 }) => {
                 name="EMAIL"
                 type="email"
                 placeholder="Email"
-                autocomplete="off"
+                autoComplete="off"
               />
               <button type="submit">
                 <i className="far fa-envelope-open mil-dark" />
@@ -180,7 +180,7 @@ const Footer3 = ({ bg = true, margin = 160 }) => {
                 name="EMAIL"
                 type="email"
                 placeholder="Email"
-                autocomplete="off"
+                autoComplete="off"
               />
               <button type="submit">
                 <i className="far fa-envelope-open mil-dark" />
@@ -285,7 +285,7 @@ const Footer2 = () => {
                 name="EMAIL"
                 type="email"
                 placeholder="Email"
-                autocomplete="off"
+                autoComplete="off"
               />
               <button type="submit">
                 <i className="far fa-envelope-open mil-dark" />

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 const Banner = ({
   title = "Process Payments Now",
   subTitle = "Trusted by Small Businesses Nationwide",
@@ -13,7 +15,7 @@ const Banner = ({
           <div className="col-xl-6">
             <div className="mil-banner-text">
               <h6 className="mil-text-gradient-2 mil-mb-20">{subTitle}</h6>
-              <h1 className="mil-display mil-text-gradient-3 mil-mb-60">
+              <h1 className="mil-display mil-text-gradient-3 mil-mb-30">
                 {title}
               </h1>
               <div className="mil-buttons-frame">
@@ -21,14 +23,23 @@ const Banner = ({
                   href="register"
                   className="mil-btn btn-shadow mil-md mil-add-arrow"
                 >
-                  Start An Application
+                  <motion.span
+                    style={{
+                      color: "white",
+                      display: "inline-block",
+                    }}
+                    whileHover={{ scale: 1.15 }}
+                  >
+                    Start An Application
+                  </motion.span>
                 </Link>
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.08 }}
                   href="https://www.youtube.com/watch?v=gRhoYxy9Oss"
                   className="mil-btn mil-md mil-light mil-add-play has-popup-video"
                 >
                   Schedule A Demo
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>

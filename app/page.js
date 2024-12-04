@@ -32,7 +32,7 @@ const page = () => {
       <div
         style={{
           position: "relative",
-          height: "100px", // Height of the gradient animation stripe
+          height: "100px",
           overflow: "flex",
         }}
       >

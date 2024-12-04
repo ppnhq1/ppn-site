@@ -23,9 +23,9 @@ const FeatureBtmLft = () => {
     <div className="mil-features mil-p-160-80">
       <div className="container">
         <div className="row flex-sm-row-reverse justify-content-between align-items-center">
-          <div className="col-xl-6 mil-mb-80">
-            <h2 className="mil-mb-30 mil-up">More Than Merchant Services</h2>
-            <p className="mil-text-m mil-soft mil-mb-60 mil-up">
+          <div className="col-xl-6 mil-mb-40">
+            <h2 className="mil-mb-20 mil-up">More Than Merchant Services</h2>
+            <p className="mil-text-m mil-soft mil-mb-30 mil-up">
               We’re not your average merchant services provider. Along with
               smooth payment processing, we’ve got your back with lending,
               banking, and insurance—everything you need to level up your
@@ -35,14 +35,14 @@ const FeatureBtmLft = () => {
               {features.map((feature, index) => (
                 <li key={index}>
                   <div className="mil-up">
-                    <h5 className="mil-mb-15">{feature.title}</h5>
+                    <h5 className="mil-mb-10">{feature.title}</h5>
                     <p className="mil-text-m mil-soft">{feature.description}</p>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="col-xl-5 mil-mb-80">
+          <div className="col-xl-5 mil-mb-40">
             <div className="mil-image-wrapper mil-up">
               <div className="mil-image-frame mil-visible-overflow">
                 <img
