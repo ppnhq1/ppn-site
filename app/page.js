@@ -21,26 +21,7 @@ const page = () => {
         title={
           <>
             Smarter Payment Solutions For
-            <br />{" "}
-            <TypeAnimation
-              preRenderFirstString={true}
-              sequence={[
-                "Business", // Display this word
-                3000, // Wait 2 seconds
-                "E-Commerce",
-                3000,
-                "Retail",
-                3000,
-                "Restaurants",
-                3000,
-                "Home Services",
-                3000,
-              ]}
-              wrapper="span" // Wrapping element, e.g., <span>, <div>, etc.
-              cursor={true} // Show cursor
-              repeat={Infinity} // Loop the animation indefinitely
-              style={{ color: "inherit" }} // Optional styling
-            />
+            <br />Your Business
           </>
         }
         img="img/home-3/1.png"
