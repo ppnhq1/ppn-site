@@ -11,12 +11,12 @@ const Banner = ({
       <div className="container">
         <div className="row align-items-center">
           <div className="col-xl-6">
-            <div className="mil-banner-text">
+            <div className="mil-banner-text mil-up">
               <h6 className="mil-text-gradient-2 mil-mb-20">{subTitle}</h6>
               <h1 className="mil-display mil-text-gradient-3 mil-mb-60">
                 {title}
               </h1>
-              <div className="mil-buttons-frame">
+              <div className="mil-buttons-frame mil-up">
                 <Link
                   href="register"
                   className="mil-btn btn-shadow mil-md mil-add-arrow"
@@ -33,7 +33,7 @@ const Banner = ({
             </div>
           </div>
           <div className="col-xl-6">
-            <div className="mil-banner-img">
+            <div className="mil-banner-img mil-up">
               <img src={img} alt="banner" style={style} />
             </div>
           </div>
