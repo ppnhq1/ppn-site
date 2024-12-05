@@ -43,7 +43,7 @@ const page = () => {
       <FeatureBtmLft />
       <div className="mil-cta mil-up">
         <div className="container">
-          <div className="mil-out-frame mil-bg-1 mil-p-160-160">
+          <div className="mil-out-frame mil-out-frames mil-bg-1 mil-p-90">
             <div className="row justify-content-center">
               <div className="col-xl-7 mil-relative">
                 <Testimonials1 />

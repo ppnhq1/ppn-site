@@ -7,11 +7,11 @@ const Banner = ({
   dark = false,
 }) => {
   return (
-    <div className={`mil-banner mil-dissolve ${dark ? "mil-dark-2" : ""}`}>
+    <div className={`mil-banner mil-banner-top mil-dissolve ${dark ? "mil-dark-2" : ""}`}>
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-xl-6">
-            <div className="mil-banner-text">
+        <div className="row align-items-center order-banner">
+          <div className="col-lg-6 col-xl-6">
+            <div className="mil-banner-text-center">
               <h6 className="mil-text-gradient-2 mil-mb-20">{subTitle}</h6>
               <h1 className="mil-display mil-text-gradient-3 mil-mb-60">
                 {title}
@@ -32,8 +32,8 @@ const Banner = ({
               </div>
             </div>
           </div>
-          <div className="col-xl-6">
-            <div className="mil-banner-img">
+          <div className="col-lg-6 col-xl-6">
+            <div className="mil-banner-img-main">
               <img src={img} alt="banner" style={style} />
             </div>
           </div>

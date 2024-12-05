@@ -679,7 +679,11 @@ banner
             }
         }
     }
-
+    @media screen and (max-width:992px) {
+        & .mil-banner-text-center {
+            text-align: center;
+        }
+    }
     &.mil-banner-inner {
         height: auto;
         background-color: transparent;
@@ -703,7 +707,6 @@ banner
         background: linear-gradient(90deg, #1B1717 0%, rgba($color-1-1, .4) 50%, #1B1717 100%);
     }
 }
-
 .mil-radial-g-1 {
     background-color: $color-1-2;
     opacity: .6;
@@ -2266,4 +2269,7 @@ footer {
             }
         }
     }
+}
+.order-banner{
+
 }

@@ -20,10 +20,10 @@ const FeatureBtmLft = () => {
   ];
 
   return (
-    <div className="mil-features mil-p-160-80">
+    <div className="mil-features mil-p-90-90">
       <div className="container">
         <div className="row flex-sm-row-reverse justify-content-between align-items-center">
-          <div className="col-xl-6 mil-mb-80">
+          <div className="col-xl-6">
             <h2 className="mil-mb-30 mil-up">More Than Merchant Services</h2>
             <p className="mil-text-m mil-soft mil-mb-60 mil-up">
               We’re not your average merchant services provider. Along with
@@ -42,7 +42,7 @@ const FeatureBtmLft = () => {
               ))}
             </ul>
           </div>
-          <div className="col-xl-5 mil-mb-80">
+          <div className="col-xl-5">
             <div className="mil-image-wrapper mil-up">
               <div className="mil-image-frame mil-visible-overflow">
                 <img
