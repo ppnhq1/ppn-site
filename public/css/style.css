@@ -528,10 +528,15 @@ buttons
   transform: translateX(3px);
 }
 
+.mil-btn:hover.mil-add-play:after {
+  transform: translateX(3px);
+}
+
 .mil-buttons-frame {
   display: flex;
   justify-content: flex-start;
 }
+
 .mil-buttons-frame a {
   margin-right: 15px;
 }
@@ -947,7 +952,7 @@ top panel
   top: 0;
   left: 0;
   width: 100%;
-  height: 130px;
+  height: 10%;
   display: flex;
   align-items: center;
   transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
@@ -964,7 +969,7 @@ top panel
 }
 .mil-top-panel.mil-active {
   background-color: rgb(246, 248, 255);
-  height: 100px;
+  height: 10%;
   box-shadow: 0 5px 10px rgba(13, 81, 82, 0.05);
 }
 @media (max-width: 1200px) {
@@ -1323,6 +1328,7 @@ banner
   padding-top: 40px;
 }
 .mil-banner .mil-banner-img {
+  opacity: 0;
   width: 100%;
 }
 .mil-banner .mil-banner-img img {
@@ -1333,6 +1339,11 @@ banner
   width: 190%;
   float: left;
 }
+
+.mil-banner-text {
+  opacity: 0;
+}
+
 @media screen and (max-width: 1200px) {
   .mil-banner {
     height: auto;
@@ -3130,7 +3141,7 @@ blog
 }
 
 .mil-mega-menu-container {
-  width: 80%; /* Allow the container to take up the full width */
+  width: 75%; /* Allow the container to take up the full width */
   margin: 0 auto;
   padding: 0 10px;
   display: flex;
