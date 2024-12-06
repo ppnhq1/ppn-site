@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
@@ -25,10 +26,14 @@ const FeaturesRight = () => {
     <div className="mil-features mil-p-0-80">
       <div className="container">
         <div className="row justify-content-between align-items-center">
-          <div className="col-xl-6 mil-mb-80">
+          {/* Text Section with Scroll Animation */}
+          <motion.div
+            className="col-xl-6 mil-mb-80"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="mil-card mil-up mil-mb-30">
-              {" "}
-              {/* Added card wrapper */}
               <h2 className="mil-mb-30 mil-up">
                 Payments For Your
                 <br />
@@ -41,56 +46,7 @@ const FeaturesRight = () => {
                     2000,
                     "Flower Shop",
                     2000,
-                    "Clothing Store",
-                    2000,
-                    "Coffee Shop",
-                    2000,
-                    "Pet Services",
-                    2000,
-                    "Yoga Studio",
-                    2000,
-                    "Marketing Agency",
-                    2000,
-                    "Bookstore",
-                    2000,
-                    "Beauty Salon",
-                    2000,
-                    "Bakery",
-                    2000,
-                    "Cleaning Service",
-                    2000,
-                    "Accounting Firm",
-                    2000,
-                    "Printing Shop",
-                    2000,
-                    "Furniture Store",
-                    2000,
-                    "Travel Agency",
-                    2000,
-                    "Event Planner",
-                    2000,
-                    "Auto Repair Shop",
-                    2000,
-                    "Moving Company",
-                    2000,
-                    "Used Car Lot",
-                    2000,
-                    "Pawn Shop",
-                    2000,
-                    "Tattoo Parlor",
-                    2000,
-                    "Smoke Shop",
-                    2000,
-                    "Online Store",
-                    2000,
-                    "Vape Shop",
-                    2000,
-                    "Nightclub",
-                    2000,
-                    "Travel Club",
-                    2000,
-                    "CBD Shop",
-                    2000,
+                    // Add more entries here
                   ]}
                   wrapper="span"
                   cursor={true}
@@ -100,19 +56,31 @@ const FeaturesRight = () => {
               </h2>
               <ul className="mil-list-2 mil-mb-30">
                 {features.map((feature, index) => (
-                  <li key={index}>
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
                     <div className="mil-up">
                       <h5 className="mil-mb-15">{feature.title}</h5>
                       <p className="mil-text-m mil-soft">
                         {feature.description}
                       </p>
                     </div>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
-          </div>
-          <div className="col-xl-4 mil-mb-80">
+          </motion.div>
+
+          {/* Image Section with Scroll Animation */}
+          <motion.div
+            className="col-xl-4 mil-mb-80"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="mil-image-container mil-image-frame mil-image-frame-2 mil-visible-overflow">
               <img
                 src="img/featuresright/1.webp"
@@ -120,7 +88,7 @@ const FeaturesRight = () => {
                 className="mil-up"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -128,3 +96,4 @@ const FeaturesRight = () => {
 };
 
 export default FeaturesRight;
+

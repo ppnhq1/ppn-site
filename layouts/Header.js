@@ -24,18 +24,20 @@ const Header = ({ dark }) => {
         <nav className={`mil-top-menu ${toggle ? "mil-active" : ""}`}>
           <ul>
             <li className={`${currentPath == "/" ? "mil-active" : ""}`}>
-              <Link href="/">Home</Link>
+              <Link href="/" className="nav-link">
+                Home
+              </Link>
             </li>
             <li
               className={`mil-mega-menu ${activeMenuFunction(["industries"])}`}
             >
-              <Link href="/industries" className="mil-menu-item">
+              <Link href="/industries" className="nav-link">
                 Industries
               </Link>
               <div className="mega-menu-content">
                 <div className="mega-menu-column">
                   <h4>Retail</h4>
-                  <Link href="/industries/retail" className="mil-mega-link">
+                  <Link href="/industries/retail" className="nav-link">
                     <div className="menu-icon-container">
                       <FaCashRegister className="menu-icon" />
                     </div>
@@ -43,7 +45,7 @@ const Header = ({ dark }) => {
                   </Link>
                   <Link
                     href="/industries/retail-solutions"
-                    className="mil-mega-link"
+                    className="nav-link"
                   >
                     <div className="menu-icon-container">
                       <FaTools className="menu-icon" />
@@ -53,10 +55,7 @@ const Header = ({ dark }) => {
                 </div>
                 <div className="mega-menu-column">
                   <h4>Hospitality</h4>
-                  <Link
-                    href="/industries/hospitality"
-                    className="mil-mega-link"
-                  >
+                  <Link href="/industries/hospitality" className="nav-link">
                     <div className="menu-icon-container">
                       <FaCreditCard className="menu-icon" />
                     </div>
@@ -64,7 +63,7 @@ const Header = ({ dark }) => {
                   </Link>
                   <Link
                     href="/industries/hospitality-tools"
-                    className="mil-mega-link"
+                    className="nav-link"
                   >
                     <div className="menu-icon-container">
                       <FaTools className="menu-icon" />
@@ -74,7 +73,7 @@ const Header = ({ dark }) => {
                 </div>
                 <div className="mega-menu-column">
                   <h4>E-commerce</h4>
-                  <Link href="/industries/ecommerce" className="mil-mega-link">
+                  <Link href="/industries/ecommerce" className="nav-link">
                     <div className="menu-icon-container">
                       <FaCashRegister className="menu-icon" />
                     </div>
@@ -82,7 +81,7 @@ const Header = ({ dark }) => {
                   </Link>
                   <Link
                     href="/industries/ecommerce-platforms"
-                    className="mil-mega-link"
+                    className="nav-link"
                   >
                     <div className="menu-icon-container">
                       <FaTools className="menu-icon" />
@@ -97,7 +96,7 @@ const Header = ({ dark }) => {
                 "payment-solutions",
               ])}`}
             >
-              <Link href="/solutions" className="mil-menu-item">
+              <Link href="/solutions" className="nav-link">
                 Solutions
               </Link>
               <div className="mega-menu-content">
@@ -105,17 +104,14 @@ const Header = ({ dark }) => {
                   <h4>Credit Card Processing</h4>
                   <Link
                     href="/solutions/credit-card-processing"
-                    className="mil-mega-link"
+                    className="nav-link"
                   >
                     <div className="menu-icon-container">
                       <FaCreditCard className="menu-icon" />
                     </div>
                     Overview
                   </Link>
-                  <Link
-                    href="/solutions/credit-card-fees"
-                    className="mil-mega-link"
-                  >
+                  <Link href="/solutions/credit-card-fees" className="nav-link">
                     <div className="menu-icon-container">
                       <FaCashRegister className="menu-icon" />
                     </div>
@@ -124,16 +120,13 @@ const Header = ({ dark }) => {
                 </div>
                 <div className="mega-menu-column">
                   <h4>ACH Payments</h4>
-                  <Link
-                    href="/solutions/ach-payments"
-                    className="mil-mega-link"
-                  >
+                  <Link href="/solutions/ach-payments" className="nav-link">
                     <div className="menu-icon-container">
                       <FaCreditCard className="menu-icon" />
                     </div>
                     Overview
                   </Link>
-                  <Link href="/solutions/ach-tools" className="mil-mega-link">
+                  <Link href="/solutions/ach-tools" className="nav-link">
                     <div className="menu-icon-container">
                       <FaTools className="menu-icon" />
                     </div>
@@ -142,16 +135,13 @@ const Header = ({ dark }) => {
                 </div>
                 <div className="mega-menu-column">
                   <h4>POS Systems</h4>
-                  <Link href="/solutions/pos-systems" className="mil-mega-link">
+                  <Link href="/solutions/pos-systems" className="nav-link">
                     <div className="menu-icon-container">
                       <FaCashRegister className="menu-icon" />
                     </div>
                     Overview
                   </Link>
-                  <Link
-                    href="/solutions/pos-hardware"
-                    className="mil-mega-link"
-                  >
+                  <Link href="/solutions/pos-hardware" className="nav-link">
                     <div className="menu-icon-container">
                       <FaTools className="menu-icon" />
                     </div>
@@ -161,15 +151,17 @@ const Header = ({ dark }) => {
               </div>
             </li>
             <li className={`${activeMenuFunction(["blog"])}`}>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog" className="nav-link">
+                Blog
+              </Link>
             </li>
           </ul>
         </nav>
         <div className="mil-menu-buttons">
-          <Link href="/register" className="mil-btn mil-clear">
+          <Link href="/register" className="nav-link mil-btn mil-clear">
             Log in
           </Link>
-          <Link href="/apply-now" className="mil-btn mil-sm">
+          <Link href="/apply-now" className="nav-link mil-btn mil-sm">
             Apply Now
           </Link>
           <div
@@ -185,3 +177,4 @@ const Header = ({ dark }) => {
 };
 
 export default Header;
+

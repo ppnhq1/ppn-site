@@ -25,3 +25,115 @@
   transform: rotate(180deg);
   color: white;
 }
+
+.button {
+  background-color: #ffffff !important;
+  /* Default white background */
+  color: #007bff !important;
+  /* Blue text */
+  padding: 12px 24px !important;
+  border: 2px solid #007bff !important;
+  /* Blue border */
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #007bff !important;
+  /* Blue background on hover */
+  color: #ffffff !important;
+  /* White text on hover */
+  transform: scale(1.05) !important;
+  /* Slightly enlarge the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  /* Add shadow */
+}
+.feature-card {
+  background-color: #ffffff;
+  /* White background */
+  border: 1px solid #e0e0e0;
+  /* Light gray border */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  padding: 20px;
+  transition: all 0.3s ease;
+  /* Smooth transitions */
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  /* Deeper shadow on hover */
+  transform: translateY(-5px);
+  /* Lift effect */
+}
+.section-gradient {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  /* Blue gradient */
+  padding: 50px 0;
+  /* Add vertical padding */
+  color: #ffffff;
+  /* White text */
+}
+
+.section-gradient h2,
+.section-gradient p {
+  color: #ffffff;
+  /* Ensure headers and text are readable */
+}
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .section-gradient {
+    text-align: center;
+    /* Center align content for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    /* Reduce header size */
+  }
+
+  p {
+    font-size: 1rem;
+    /* Adjust text size */
+  }
+}
+.nav-link {
+  position: relative;
+  color: #333;
+  /* Default link color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+  /* Change text color on hover */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  /* Adjust based on the spacing */
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  /* Extend underline on hover */
+}

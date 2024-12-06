@@ -8,26 +8,28 @@ export const CallToAction1 = () => {
           <div className="row align-items-end">
             <div className="mil-text-center">
               <h2 className="mil-mb-30 mil-light mil-up">
-                Discover the Difference When You Switch <br></br>
+                Discover the Difference When You Switch <br />
                 To Process Payments Now
               </h2>
               <p className="mil-text-m mil-light mil-mb-60 mil-up">
                 At Process Payments Now, we empower our clients with better
-                payment solutions.<br></br>
-                Learn more about the power of Procss Payments Now today!
+                payment solutions.
+                <br />
+                Learn more about the power of Process Payments Now today!
               </p>
               <div className="mil-up mil-mb-60">
-                <Link
-                  href="/register"
-                  className="mil-btn mil-button-transform mil-md mil-add-arrow"
-                >
-                  Schedule A Demo
+                <Link href="/register">
+                  <button className="button">Schedule A Demo</button>
                 </Link>
               </div>
             </div>
           </div>
           <div className="mil-illustration-absolute mil-type-2 mil-up">
-            <img src="/img/cta/1.webp" alt="illustration" />
+            <img
+              src="/img/cta/1.webp"
+              alt="illustration"
+              className="image-hover" // Add hover effect to the image
+            />
           </div>
         </div>
       </div>
@@ -42,7 +44,6 @@ export const CallToAction2 = () => {
         <div className="mil-out-frame mil-visible mil-image mil-illustration-fix mil-p-160-0">
           <div className="row align-items-center justify-content-center">
             <div className="mil-text-center">
-              {/* New white container for form and text */}
               <div className="mil-form-container">
                 <h2 className="mil-mb-10 mil-light mil-up mil-header-text">
                   Get Started Today
@@ -96,7 +97,7 @@ export const CallToAction2 = () => {
                       style={{ flex: "1" }}
                     />
                   </div>
-                  <button type="submit" className="mil-btn mil-sm">
+                  <button type="submit" className="button">
                     Learn More
                   </button>
                 </form>
@@ -104,7 +105,11 @@ export const CallToAction2 = () => {
             </div>
           </div>
           <div className="mil-illustration-absolute mil-type-2 mil-up">
-            <img src="/img/cta/1.webp" alt="illustration" />
+            <img
+              src="/img/cta/1.webp"
+              alt="illustration"
+              className="image-hover" // Add hover effect to the image
+            />
           </div>
         </div>
       </div>
