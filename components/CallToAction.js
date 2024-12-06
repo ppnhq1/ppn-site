@@ -1,20 +1,33 @@
 import Link from "next/link";
 
+const InputField = ({ name, type, placeholder, required, style }) => (
+  <input
+    className="mil-input"
+    name={name}
+    type={type}
+    placeholder={placeholder}
+    autoComplete="off"
+    required={required}
+    style={style}
+  />
+);
+
 export const CallToAction1 = () => {
   return (
-    <div className="mil-cta mil-up">
+    <section className="mil-cta mil-up">
       <div className="container">
         <div className="mil-out-frame mil-visible mil-image mil-illustration-fix mil-p-160-0">
           <div className="row align-items-end">
             <div className="mil-text-center">
               <h2 className="mil-mb-30 mil-light mil-up">
-                Discover the Difference When You Switch <br></br>
+                Discover the Difference When You Switch <br />
                 To Process Payments Now
               </h2>
               <p className="mil-text-m mil-light mil-mb-60 mil-up">
                 At Process Payments Now, we empower our clients with better
-                payment solutions.<br></br>
-                Learn more about the power of Procss Payments Now today!
+                payment solutions.
+                <br />
+                Learn more about the power of Process Payments Now today!
               </p>
               <div className="mil-up mil-mb-60">
                 <Link
@@ -27,22 +40,21 @@ export const CallToAction1 = () => {
             </div>
           </div>
           <div className="mil-illustration-absolute mil-type-2 mil-up">
-            <img src="/img/cta/1.webp" alt="illustration" />
+            <img src="/img/cta/1.webp" alt="CTA illustration" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export const CallToAction2 = () => {
   return (
-    <div className="mil-cta mil-up">
+    <section className="mil-cta mil-up">
       <div className="container">
         <div className="mil-out-frame mil-visible mil-image mil-illustration-fix mil-p-160-0">
           <div className="row align-items-center justify-content-center">
             <div className="mil-text-center">
-              {/* New white container for form and text */}
               <div className="mil-form-container">
                 <h2 className="mil-mb-10 mil-light mil-up mil-header-text">
                   Get Started Today
@@ -57,42 +69,34 @@ export const CallToAction2 = () => {
                   id="callbackForm"
                   className="mil-subscribe-form mil-text-center"
                 >
-                  <input
-                    className="mil-input mil-mb-15"
+                  <InputField
                     name="NAME"
                     type="text"
                     placeholder="Full Name"
-                    autoComplete="off"
-                    required
+                    required={true}
                   />
-                  <input
-                    className="mil-input mil-mb-15"
+                  <InputField
                     name="BUSINESS_NAME"
                     type="text"
                     placeholder="Business Name"
-                    autoComplete="off"
-                    required
+                    required={true}
                   />
                   <div
-                    className="mil-input-group mil-mb-15"
+                    className="mil-input-group"
                     style={{ display: "flex", gap: "15px" }}
                   >
-                    <input
-                      className="mil-input"
+                    <InputField
                       name="PHONE"
                       type="tel"
                       placeholder="Phone Number"
-                      autoComplete="off"
-                      required
+                      required={true}
                       style={{ flex: "1" }}
                     />
-                    <input
-                      className="mil-input"
+                    <InputField
                       name="EMAIL"
                       type="email"
                       placeholder="Email"
-                      autoComplete="off"
-                      required
+                      required={true}
                       style={{ flex: "1" }}
                     />
                   </div>
@@ -104,10 +108,10 @@ export const CallToAction2 = () => {
             </div>
           </div>
           <div className="mil-illustration-absolute mil-type-2 mil-up">
-            <img src="/img/cta/1.webp" alt="illustration" />
+            <img src="/img/cta/1.webp" alt="CTA illustration" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
