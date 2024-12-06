@@ -85,3 +85,24 @@
   color: #ffffff;
   /* Ensure headers and text are readable */
 }
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .section-gradient {
+    text-align: center;
+    /* Center align content for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    /* Reduce header size */
+  }
+
+  p {
+    font-size: 1rem;
+    /* Adjust text size */
+  }
+}
