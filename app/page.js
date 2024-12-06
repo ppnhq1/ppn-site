@@ -17,16 +17,34 @@ import GradientAnimation from "@/components/GradientAnimation";
 const page = () => {
   return (
     <PlaxLayout bg={false} margin={0}>
+      {/* Banner Section with Animated Text */}
       <Banner
         title={
-          <>
-            Smarter Payment Solutions For
-            <br />Your Business
-          </>
+          <TypeAnimation
+            sequence={[
+              "Smarter Payment Solutions", // First text
+              2000, // Pause for 2 seconds
+              "For Your Business", // Second text
+              2000, // Pause for 2 seconds
+            ]}
+            wrapper="span" // Changed wrapper from h1 to span
+            cursor={true}
+            repeat={Infinity}
+            style={{
+              fontSize: "3rem",
+              fontWeight: "700",
+              textAlign: "center",
+              color: "#2e7d32", // Green color
+              marginBottom: "20px",
+              display: "inline-block", // Ensures proper text alignment
+            }}
+          />
         }
         img="img/home-3/1.png"
-        style={{ maxWidth: "100%" }}
+        style={{ maxWidth: "100%", marginTop: "20px" }}
       />
+
+      {/* Rest of the Homepage */}
       <Brands />
       <FeaturesLeft />
       <div
@@ -59,3 +77,4 @@ const page = () => {
 };
 
 export default page;
+

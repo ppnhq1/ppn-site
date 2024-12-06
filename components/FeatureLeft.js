@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const FeaturesLeft = () => {
@@ -23,7 +24,12 @@ const FeaturesLeft = () => {
     <div className="mil-features mil-p-0-80">
       <div className="container">
         <div className="row flex-sm-row-reverse justify-content-between align-items-center">
-          <div className="col-xl-6 mil-mb-80">
+          <motion.div
+            className="col-xl-6 mil-mb-80"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2 className="mil-mb-30 mil-up">
               Your Partner For Credit Card and ACH Processing
             </h2>
@@ -39,18 +45,27 @@ const FeaturesLeft = () => {
             </p>
             <ul className="mil-list-1">
               {features.map((feature, index) => (
-                <li key={index}>
-                  <div className="mil-up">
-                    <h5 className="mil-mb-15 mil-up">{feature.title}</h5>
-                    <p className="mil-text-m mil-soft mil-up">
-                      {feature.description}
-                    </p>
-                  </div>
-                </li>
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  <h5 className="mil-mb-15 mil-up">{feature.title}</h5>
+                  <p className="mil-text-m mil-soft mil-up">
+                    {feature.description}
+                  </p>
+                </motion.li>
               ))}
             </ul>
-          </div>
-          <div className="col-xl-5 mil-mb-80">
+          </motion.div>
+
+          <motion.div
+            className="col-xl-5 mil-mb-80"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="mil-image-frame mil-visible-overflow">
               <div className="mil-circle-background mil-up"></div>
               <img
@@ -59,7 +74,7 @@ const FeaturesLeft = () => {
                 className="mil-up"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -67,3 +82,4 @@ const FeaturesLeft = () => {
 };
 
 export default FeaturesLeft;
+

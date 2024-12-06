@@ -25,3 +25,29 @@
   transform: rotate(180deg);
   color: white;
 }
+
+.button {
+  background-color: #ffffff !important;
+  /* Default white background */
+  color: #007bff !important;
+  /* Blue text */
+  padding: 12px 24px !important;
+  border: 2px solid #007bff !important;
+  /* Blue border */
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #007bff !important;
+  /* Blue background on hover */
+  color: #ffffff !important;
+  /* White text on hover */
+  transform: scale(1.05) !important;
+  /* Slightly enlarge the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  /* Add shadow */
+}
