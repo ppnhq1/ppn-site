@@ -47,6 +47,7 @@ const FeaturesLeft = () => {
               {features.map((feature, index) => (
                 <motion.li
                   key={index}
+                  className="feature-card" // Apply feature-card class
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -82,4 +83,3 @@ const FeaturesLeft = () => {
 };
 
 export default FeaturesLeft;
-

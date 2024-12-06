@@ -13,7 +13,8 @@ export const CallToAction1 = () => {
               </h2>
               <p className="mil-text-m mil-light mil-mb-60 mil-up">
                 At Process Payments Now, we empower our clients with better
-                payment solutions.<br />
+                payment solutions.
+                <br />
                 Learn more about the power of Process Payments Now today!
               </p>
               <div className="mil-up mil-mb-60">
@@ -24,14 +25,17 @@ export const CallToAction1 = () => {
             </div>
           </div>
           <div className="mil-illustration-absolute mil-type-2 mil-up">
-            <img src="/img/cta/1.webp" alt="illustration" />
+            <img
+              src="/img/cta/1.webp"
+              alt="illustration"
+              className="image-hover" // Add hover effect to the image
+            />
           </div>
         </div>
       </div>
     </div>
   );
 };
-;
 
 export const CallToAction2 = () => {
   return (
@@ -101,7 +105,11 @@ export const CallToAction2 = () => {
             </div>
           </div>
           <div className="mil-illustration-absolute mil-type-2 mil-up">
-            <img src="/img/cta/1.webp" alt="illustration" />
+            <img
+              src="/img/cta/1.webp"
+              alt="illustration"
+              className="image-hover" // Add hover effect to the image
+            />
           </div>
         </div>
       </div>
