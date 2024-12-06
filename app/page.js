@@ -21,7 +21,13 @@ const page = () => {
         title={
           <>
             Smarter Payment Solutions For
-            <br />Your Business
+            <br />
+            <TypeAnimation
+              sequence={[" Your Business ", 2000, "Your Transition "]}
+              wrapper="span"
+              style={{ display: "inline-flex" }}
+              repeat={Infinity}
+            />
           </>
         }
         img="img/home-3/1.png"

@@ -9,7 +9,12 @@ export const CallToAction1 = () => {
             <div className="mil-text-center">
               <h2 className="mil-mb-30 mil-light mil-up">
                 Discover the Difference When You Switch <br></br>
-                To Process Payments Now
+                <TypeAnimation
+                  sequence={["", 1000, "To Process Payments Now", ,]}
+                  wrapper="span"
+                  style={{ color: "#ffff" }}
+                  repeat={Infinity}
+                />
               </h2>
               <p className="mil-text-m mil-light mil-mb-60 mil-up">
                 At Process Payments Now, we empower our clients with better

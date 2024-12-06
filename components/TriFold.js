@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaPiggyBank, FaHandshake, FaRocketchat } from "react-icons/fa";
+import TypeAnimation from "react-type-animation";
 
 const TriFold = () => {
   return (
@@ -8,8 +9,15 @@ const TriFold = () => {
         <div className="mil-out-frame mil-visible mil-image mil-p-160-130">
           <div className="row align-items-end">
             <div className="col-xl-8 mil-mb-80-adaptive-30">
-              <h2 className="mil-up mil-light">
-                We empower businesses with payment technology
+            <h2 className="mil-up mil-light">
+                We empower businesses with
+                <br />
+                <TypeAnimation
+                  sequence={["", 1000, "Payment Technology"]}
+                  wrapper="span"
+                  style={{ color: "#ffff", display: "flex" }}
+                  repeat={Infinity}
+                />
               </h2>
             </div>
             <div className="col-xl-4 mil-mb-80 mil-up">

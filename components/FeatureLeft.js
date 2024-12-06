@@ -1,4 +1,5 @@
 import React from "react";
+import TypeAnimation from "react-type-animation";
 
 const FeaturesLeft = () => {
   const features = [
@@ -24,8 +25,14 @@ const FeaturesLeft = () => {
       <div className="container">
         <div className="row flex-sm-row-reverse justify-content-between align-items-center">
           <div className="col-xl-6 mil-mb-80">
-            <h2 className="mil-mb-30 mil-up">
-              Your Partner For Credit Card and ACH Processing
+          <h2 className="mil-mb-30 mil-up">
+              Your Partner For
+              <TypeAnimation
+                sequence={["Credit Card", 1000, "And", 2000, "ACH Processing"]}
+                wrapper="span"
+                style={{ display: "flex" }}
+                repeat={Infinity}
+              />
             </h2>
             <p className="mil-text-m mil-soft mil-mb-60 mil-up">
               The Process Payments Now ecosystem of payment solutions is
