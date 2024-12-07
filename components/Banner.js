@@ -32,7 +32,7 @@ const Banner = ({
               </div>
             </div>
           </div>
-          <div className="col-xl-6">
+          <div className="col-xl-6 hero">
             <div className="mil-banner-img">
               <img src={img} alt="banner" style={style} />
             </div>
