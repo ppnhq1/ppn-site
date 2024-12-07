@@ -7,6 +7,7 @@ const Banner = ({
   dark = false,
 }) => {
   return (
+    
     <div className={`mil-banner mil-dissolve ${dark ? "mil-dark-2" : ""}`}>
       <div className="container">
         <div className="row align-items-center">
