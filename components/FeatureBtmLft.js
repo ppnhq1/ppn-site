@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const FeatureBtmLft = () => {
   const features = [
@@ -24,7 +25,16 @@ const FeatureBtmLft = () => {
       <div className="container">
         <div className="row flex-sm-row-reverse justify-content-between align-items-center">
           <div className="col-xl-6 mil-mb-80">
-            <h2 className="mil-mb-30 mil-up">More Than Merchant Services</h2>
+          <h2 className="mil-mb-30 mil-up">
+              We are
+              <br />
+              <TypeAnimation
+                sequence={["", 1000, "More Than Merchant Services"]}
+                wrapper="span"
+                style={{ display: "flex" }}
+                repeat={Infinity}
+              />
+            </h2>
             <p className="mil-text-m mil-soft mil-mb-60 mil-up">
               We’re not your average merchant services provider. Along with
               smooth payment processing, we’ve got your back with lending,
