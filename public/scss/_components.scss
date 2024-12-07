@@ -118,6 +118,7 @@ top panel
     display: flex;
     align-items: center;
     transition: $t-md;
+    background-color: #000;
 
     & .container {
         @include flex-between-center;
@@ -135,7 +136,7 @@ top panel
 
     @media (max-width: 1200px) {
         height: 80px;
-        background-color: $color-2-5;
+        background-color: #000;
 
         &.mil-active {
             height: 80px;
