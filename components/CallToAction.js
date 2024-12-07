@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
 
 export const CallToAction1 = () => {
   return (

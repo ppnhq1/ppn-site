@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaPiggyBank, FaHandshake, FaRocketchat } from "react-icons/fa";
-import TypeAnimation from "react-type-animation";
+import { TypeAnimation } from "react-type-animation";
 
 const TriFold = () => {
   return (
