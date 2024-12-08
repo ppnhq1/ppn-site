@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TypeAnimation } from "react-type-animation";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FeaturesRight = () => {
   const features = [
@@ -21,108 +25,82 @@ const FeaturesRight = () => {
     },
   ];
 
+  useEffect(() => {
+    gsap.fromTo(
+      ".mil-feature-item",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".mil-features",
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="mil-features mil-p-0-80">
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col-xl-6 mil-mb-80">
             <div className="mil-card mil-up mil-mb-30">
-              {" "}
-              {/* Added card wrapper */}
-              <h2 className="mil-mb-30 mil-up">
-                Payments For Your
-                <br />
-                <TypeAnimation
-                  preRenderFirstString={true}
-                  sequence={[
-                    "Grocery Store",
-                    2000,
-                    "Collection Agency",
-                    2000,
-                    "Flower Shop",
-                    2000,
-                    "Clothing Store",
-                    2000,
-                    "Coffee Shop",
-                    2000,
-                    "Pet Services",
-                    2000,
-                    "Yoga Studio",
-                    2000,
-                    "Marketing Agency",
-                    2000,
-                    "Bookstore",
-                    2000,
-                    "Beauty Salon",
-                    2000,
-                    "Bakery",
-                    2000,
-                    "Cleaning Service",
-                    2000,
-                    "Accounting Firm",
-                    2000,
-                    "Printing Shop",
-                    2000,
-                    "Furniture Store",
-                    2000,
-                    "Travel Agency",
-                    2000,
-                    "Event Planner",
-                    2000,
-                    "Auto Repair Shop",
-                    2000,
-                    "Moving Company",
-                    2000,
-                    "Used Car Lot",
-                    2000,
-                    "Pawn Shop",
-                    2000,
-                    "Tattoo Parlor",
-                    2000,
-                    "Smoke Shop",
-                    2000,
-                    "Online Store",
-                    2000,
-                    "Vape Shop",
-                    2000,
-                    "Nightclub",
-                    2000,
-                    "Travel Club",
-                    2000,
-                    "CBD Shop",
-                    2000,
-                  ]}
-                  wrapper="span"
-                  cursor={true}
-                  repeat={Infinity}
-                  style={{ color: "#060a57" }}
-                />
-              </h2>
-              <ul className="mil-list-2 mil-mb-30">
-                {features.map((feature, index) => (
-                  <li key={index}>
-                    <div className="mil-up">
-                      <h5 className="mil-mb-15">{feature.title}</h5>
-                      <p className="mil-text-m mil-soft">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="col-xl-4 mil-mb-80">
-            <div className="mil-image-container mil-image-frame mil-image-frame-2 mil-visible-overflow">
-              <img
-                src="img/featuresright/1.webp"
-                alt="image"
-                className="mil-up"
+              <TypeAnimation
+                sequence={[
+                  "Innovative Payment Solutions",
+                  2000,
+                  "Tailored for Your Business",
+                  2000,
+                ]}
+                wrapper="h2"
+                cursor={true}
+                repeat={Infinity}
+                className="mil-display mil-text-gradient-3"
               />
             </div>
+            <ul className="mil-list-1">
+              {features.map((feature, index) => (
+                <li key={index} className="mil-feature-item">
+                  <div className="mil-icon-box"></div>
+                  <div>
+                    <h5 className="mil-mb-15 mil-up">{feature.title}</h5>
+                    <p className="mil-text-m mil-soft">{feature.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="col-xl-5">
+            <img
+              src="img/featuresright/1.webp"
+              alt="Features"
+              className="mil-up"
+              onError={(e) => {
+                console.error("Image not found: img/home-1/features-right.png");
+                e.target.src = "img/home-1/default.png"; // Fallback image
+              }}
+            />
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .mil-feature-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 30px;
+        }
+        .mil-icon-box {
+          margin-right: 20px;
+        }
+        .mil-icon {
+          width: 50px;
+          height: 50px;
+        }
+      `}</style>
     </div>
   );
 };

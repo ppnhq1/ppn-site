@@ -1,23 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const FeaturesLeft = () => {
-  const features = [
-    {
-      title: "Industry-Specific Payment Solutions",
-      description:
-        "From collection agencies to smoke shops, we deliver tailored payment solutions designed to fit your unique business model and streamline your transactions.",
-    },
-    {
-      title: "Comprehensive Customer Support",
-      description:
-        "We offer round-the-clock US-based support for merchants and sales partners, understanding that your business operates 24/7 and requires reliable assistance every second of the day.",
-    },
-    {
-      title: "Scalable Payment Gateways and Point of Sales",
-      description:
-        "We offer flexible systems that grow alongside your business. Our solutions can be tailor fit for any industry. From payment gateways to complete point of sale solutions, we got you covered.",
-    },
-  ];
+gsap.registerPlugin(ScrollTrigger);
+
+const features = [
+  {
+    title: "Industry-Specific Payment Solutions",
+    description:
+      "From collection agencies to smoke shops, we deliver tailored payment solutions designed to fit your unique business model and streamline your transactions.",
+  },
+  {
+    title: "Comprehensive Customer Support",
+    description:
+      "We offer round-the-clock US-based support for merchants and sales partners, understanding that your business operates 24/7 and requires reliable assistance every second of the day.",
+  },
+  {
+    title: "Scalable Payment Gateways and Point of Sales",
+    description:
+      "We offer flexible systems that grow alongside your business. Our solutions can be tailor fit for any industry. From payment gateways to complete point of sale solutions, we got you covered.",
+  },
+];
+
+const FeatureLeft = () => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".mil-feature-item",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".mil-features",
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
 
   return (
     <div className="mil-features mil-p-0-80">
@@ -39,31 +61,33 @@ const FeaturesLeft = () => {
             </p>
             <ul className="mil-list-1">
               {features.map((feature, index) => (
-                <li key={index}>
-                  <div className="mil-up">
+                <li key={index} className="mil-feature-item">
+                  <div>
                     <h5 className="mil-mb-15 mil-up">{feature.title}</h5>
-                    <p className="mil-text-m mil-soft mil-up">
-                      {feature.description}
-                    </p>
+                    <p className="mil-text-m mil-soft">{feature.description}</p>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="col-xl-5 mil-mb-80">
-            <div className="mil-image-frame mil-visible-overflow">
-              <div className="mil-circle-background mil-up"></div>
-              <img
-                src="img/featuresleft/1.webp"
-                alt="image"
-                className="mil-up"
-              />
-            </div>
+          <div className="col-xl-5">
+            <img
+              src="img/featuresleft/1.webp"
+              alt="Features"
+              className="mil-up"
+            />
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .mil-feature-item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 30px;
+        }
+      `}</style>
     </div>
   );
 };
 
-export default FeaturesLeft;
+export default FeatureLeft;
