@@ -1,6 +1,29 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Brands = () => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".mil-brand img",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".mil-brands",
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="mil-brands mil-p-160-160">
       <div className="container">
@@ -21,6 +44,15 @@ const Brands = () => {
           ))}
         </div>
       </div>
+      <style jsx>{`
+        .mil-brand img {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mil-brand img:hover {
+          transform: scale(1.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+      `}</style>
     </div>
   );
 };

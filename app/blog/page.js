@@ -4,13 +4,16 @@ import Head from "next/head";
 import { PageBanner } from "@/components/Banner";
 import PlaxLayout from "@/layouts/PlaxLayout";
 
+const dbName = process.env.MONGODB_DB_NAME;
+const collectionName = process.env.MONGODB_BLOG;
+
 export default async function BlogPage() {
   let posts = [];
   try {
     // Connect to MongoDB
     const client = await clientPromise;
-    const db = client.db("ppn-site-dev");
-    const collection = db.collection("blogs");
+    const db = client.db(dbName);
+    const collection = db.collection(collectionName);
 
     // Fetch all blog posts
     posts = await collection
