@@ -20,7 +20,7 @@ const FeaturesLeft = () => {
   ];
 
   return (
-    <div className="mil-features mil-p-0-80">
+    <div className="mill-ban mil-p-0-80">
       <div className="container">
         <div className="row flex-sm-row-reverse justify-content-between align-items-center">
           <div className="col-xl-6 mil-mb-80">
